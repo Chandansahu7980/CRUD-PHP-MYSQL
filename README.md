@@ -28,8 +28,10 @@ php-crud-app/
 │   └── index.php         # Your PHP CRUD logic goes here
 ├── db/
 │   └── init.sql          # Optional initial DB script
+|  screenshots/
+|   ├── app-home.png
+|   └── phpmyadmin.png
 └── README.md
-
 
 ```
 
@@ -78,3 +80,14 @@ This project is open-source and free to use for learning and development.
 Chandan
 🚀 IT Engineer | Docker & PHP Enthusiast
 📧 chandansahu7980@gmail.com
+
+## 🖼️ Screenshots
+
+### PHP App UI
+
+![App Screenshot](screenshots/app-home.png)
+
+### phpMyAdmin
+
+![phpMyAdmin Screenshot](screenshots/php-myadmin.png)
+
