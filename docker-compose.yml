@@ -1,0 +1,35 @@
+name: php_crud_project3
+services:
+    php:
+        image: php:8.1-apache
+        container_name: my-php-web
+        ports:
+            - "2654:80"
+        volumes:
+            - ./php:/var/www/html
+        depends_on:
+            - mysql
+        
+    mysql:
+        image: mysql:oracle
+        container_name: my-mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: project3
+        ports:
+            - "2206:3306"
+        volumes:
+            - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+            - mysql_data:/var/lib/mysql
+    phpmyadmin:
+        image: phpmyadmin
+        container_name: my-phpmyadmin
+        ports:
+            - "7008:80"
+        environment:
+            PMA_HOST: mysql
+            PMA_PORT: 3306
+        depends_on:
+            - mysql
+volumes:
+    mysql_data:
