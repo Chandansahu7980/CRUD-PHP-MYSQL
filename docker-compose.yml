@@ -1,7 +1,7 @@
 name: php_crud_project3
 services:
     php:
-        image: php:8.1-apache
+        build: ./php
         container_name: my-php-web
         ports:
             - "2654:80"
